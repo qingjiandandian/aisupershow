@@ -1,61 +1,143 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
-<meta charset="UTF-8">
-<title>我的时间胶囊</title>
-<style>
-  body {font-family: Arial, sans-serif;}
-  .container {max-width: 800px; margin: auto;}
-  img {max-width: 100%;}
-  h1, h2, h3, h4, h5, h6 {color: #333;}
-</style>
+  <meta charset="UTF-8">
+  <title>我的时间胶囊</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+   .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #333;
+    }
+
+    /* 为列表添加一些样式，使其更美观 */
+    ol,
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ol li:before {
+      content: counter(list-item) ". ";
+      counter-increment: list-item;
+      font-weight: bold;
+    }
+
+    ul li:before {
+      content: "✓ ";
+      color: #009900;
+      font-weight: bold;
+    }
+
+    /* 为强调的文本添加下划线样式 */
+    strong {
+      text-decoration: underline;
+    }
+
+    /* 为缩写词添加鼠标悬停提示的样式 */
+    abbr {
+      text-decoration: none;
+      border-bottom: 1px dotted #000;
+      cursor: help;
+    }
+
+    /* 为ruby元素添加一些样式 */
+    ruby {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    rt {
+      font-size: 0.6em;
+      color: #999;
+    }
+
+    /* 为mark元素添加背景色变化效果 */
+    mark {
+      background-color: #ffff99;
+      padding: 2px 4px;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+    }
+
+    mark:hover {
+      background-color: #ffcc00;
+    }
+
+    /* 为图片添加一些阴影效果，使其更突出 */
+    img {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
+
 <body>
-<div class="container">
-  <h1>创建您的专属时间胶囊</h1>
-  <h2>记录现在，留给未来</h2>
-  <p><mark>时间胶囊</mark>是一种特殊的容器，用来保存物品或信息，直到未来某一天才被打开查看。</p>
+  <div class="container">
+    <h1>创建您的专属时间胶囊 <sup>✨</sup></h1>
+    <p>想象一下，<em>把此刻的记忆、情感和期待封存起来</em>，等到未来的某一天再打开，那将是多么奇妙的体验呀！就如同打开了一扇通往过去的时光之门~</p>
 
-  <h3>如何开始？</h3>
-  <ol>
-    <li>写下你的故事、愿望或是给未来的信。</li>
-    <li>选择要放入的纪念品。</li>
-    <li>设置开启时间。</li>
-  </ol>
+    <h2>记录现在，留给未来 <sub>📜</sub></h2>
+    <p><mark>时间胶囊</mark>是一种特殊的容器，用来保存物品或信息，直到未来某一天才被打开查看。它就像是一个<ruby>时光的保险柜<rt>Time Vault</rt></ruby>，将我们当下最珍贵的东西妥善保管。</p>
 
-  <h3>灵感来源</h3>
-  <ul>
-    <li>一张全家福</li>
-    <li>你最喜欢的书的一段摘录</li>
-    <li>今年最难忘的经历描述</li>
-  </ul>
+    <h3>如何开始？ <img src="start_icon.jpg" alt="开始图标" style="width: 30px; vertical-align: middle;"></h3>
+    <ol>
+      <li>写下你的故事、愿望或是给未来的信。可以尽情地<em>倾诉内心的话语</em>，把那些平时不敢说出口的梦想都写下来哦~</li>
+      <li>选择要放入的纪念品。比如<em>第一次约会时的电影票根</em>、<em>旅行时带回来的特色小物件</em>等等，每一件都承载着满满的回忆呢。</li>
+      <li>设置开启时间。可以是<em>十年后的生日</em>、<em>孩子长大成人的那一天</em>，让这份期待更加具体。</li>
+    </ol>
 
-  <h4>更多创意建议</h4>
-  <ul>
-    <li>当前流行的音乐列表</li>
-    <li>个人手工艺品</li>
-    <li>写给自己的信</li>
-  </ul>
+    <h3>灵感来源 <img src="inspiration_icon.jpg" alt="灵感图标" style="width: 30px; vertical-align: middle;"></h3>
+    <ul>
+      <li>一张全家福 <img src="family_photo.jpg" alt="全家福示例图" style="width: 50px; vertical-align: middle;">，那是家庭温暖的象征，每次看到都会心生暖意。</li>
+      <li>你最喜欢的书的一段摘录 <ruby>《百年孤独》<rt>Cien años de soledad</rt></ruby>中的经典语句，仿佛能带你再次沉浸在那奇幻的文学世界里。</li>
+      <li>今年最难忘的经历描述，比如<em>登顶那座梦寐以求的高山</em>时的激动心情，永远都不会忘记。</li>
+    </ul>
 
-  <h5>存放小贴士</h5>
-  <p>确保您的时间胶囊存放在干燥且安全的地方。避免阳光直射和潮湿环境。</p>
+    <h4>更多创意建议 <img src="creative_icon.jpg" alt="创意图标" style="width: 30px; vertical-align: middle;"></h4>
+    <ul>
+      <li>当前流行的音乐列表，放上几首<em>当下最热门的歌曲</em>，等到未来再听，说不定会勾起很多回忆呢。</li>
+      <li>个人手工艺品，自己亲手制作的<em>陶艺小摆件</em>或者<em>手工编织的小挂件</em>，都是独一无二的哦。</li>
+      <li>写给自己的信，和未来的自己来一场跨越时空的对话，问问那时的自己是否实现了现在的梦想。</li>
+    </ul>
 
-  <h6>注意事项</h6>
-  <p>请不要放置易腐烂或对环境有害的物品。</p>
+    <h5>存放小贴士 <img src="storage_icon.jpg" alt="存放图标" style="width: 30px; vertical-align: middle;"></h5>
+    <p>确保您的时间胶囊存放在干燥且安全的地方。<strong>避免阳光直射</strong>和潮湿环境，不然里面的物品可能会受到损坏哦。可以选择放在<em>衣柜的顶层</em>、<em>地下室的干燥角落</em>等地方呢。</p>
 
-  <dl>
-    <dt>时间胶囊</dt>
-    <dd>通常指的是装有文件和其他物品的密封容器，旨在长期保存并在指定的未来日期打开。</dd>
-  </dl>
+    <h6>注意事项 <img src="caution_icon.jpg" alt="注意图标" style="width: 30px; vertical-align: middle;"></h6>
+    <p>请不要放置易腐烂或对环境有害的物品。比如<em>新鲜的水果</em>、<em>化学药品</em>等，这些可都不适合放在时间胶囊里呀。</p>
 
-  <p>记得标记好您的<strong>时间胶囊</strong>，并安全存放！</p>
-  <p>更多详情，请联系：<abbr title="电子邮箱">email@example.com</abbr></p>
+    <dl>
+      <dt>时间胶囊</dt>
+      <dd>通常指的是装有文件和其他物品的密封容器，旨在长期保存并在指定的未来日期打开。它就像是一个<ruby>时光的收纳盒<rt>Time Storage Box</rt></ruby>，将我们生活中的点滴美好都收纳其中。</dd>
+    </dl>
 
-  <img src="time_capsule.jpg" alt="时间胶囊示例图">
+    <p>记得标记好您的<strong>时间胶囊</strong>，并安全存放！可以在胶囊外面贴上一个<em>带有自己名字和开启时间的标签</em>，这样就不会搞混啦。</p>
+    <p>更多详情，请联系：<abbr title="电子邮箱">email@example.com</abbr>，我们随时为您解答疑问哦~</p>
 
-  <h4>参与者展示</h4>
-  <p>来看看其他人的精彩瞬间吧！</p>
-  <img src="participant_photos.jpg" alt="参与者照片合集">
-</div>
+    <img src="time_capsule.jpg" alt="时间胶囊示例图">
+
+    <h4>参与者展示 <img src="participant_icon.jpg" alt="参与者图标" style="width: 30px; vertical-align: middle;"></h4>
+    <p>来看看其他人的精彩瞬间吧！他们都用时间胶囊记录下了属于自己的独特故事呢。</p>
+    <img src="participant_photos.jpg" alt="参与者照片合集">
+  </div>
 </body>
+
 </html>
