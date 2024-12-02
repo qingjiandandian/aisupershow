@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>MBTI性格测试</title>
+<style>
+  body {font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px;}
+  h1, h2, h3, h4, h5, h6 {color: #333;}
+  .question {margin-bottom: 20px;}
+  input[type="radio"] {margin-right: 10px;}
+  button {padding: 10px 20px; background-color: #007BFF; color: white; border: none; cursor: pointer;}
+  button:hover {background-color: #0056b3;}
+  .result {margin-top: 20px; font-size: 1.2em; color: #007BFF;}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>探索你的MBTI性格类型</h1>
+  <p>请根据自己的实际情况选择最符合的答案。</p>
+
+  <!-- 示例问题 -->
+  <div class="question">
+    <h3>在社交场合中，我更倾向于：</h3>
+    <label><input type="radio" name="q1" value="E">积极参与交流</label><br>
+    <label><input type="radio" name="q1" value="I">安静地观察</label>
+  </div>
+
+  <div class="question">
+    <h4>面对决策时，我更依赖于：</h4>
+    <label><input type="radio" name="q2" value="S">具体的事实和细节</label><br>
+    <label><input type="radio" name="q2" value="N">直觉和可能性</label>
+  </div>
+
+  <div class="question">
+    <h5>在做决定时，我更注重：</h5>
+    <label><input type="radio" name="q3" value="T">逻辑分析</label><br>
+    <label><input type="radio" name="q3" value="F">情感和个人价值观</label>
+  </div>
+
+  <div class="question">
+    <h6>日常生活中，我更喜欢：</h6>
+    <label><input type="radio" name="q4" value="J">有计划和组织</label><br>
+    <label><input type="radio" name="q4" value="P">灵活多变</label>
+  </div>
+
+  <button onclick="calculateMBTI()">提交答案</button>
+  <div id="result" class="result"></div>
+</div>
+
+<script>
+function calculateMBTI() {
+  const q1 = document.querySelector('input[name="q1"]:checked').value;
+  const q2 = document.querySelector('input[name="q2"]:checked').value;
+  const q3 = document.querySelector('input[name="q3"]:checked').value;
+  const q4 = document.querySelector('input[name="q4"]:checked').value;
+
+  const mbtiType = q1 + q2 + q3 + q4;
+  document.getElementById("result").innerText = `您的MBTI类型可能是：${mbtiType}`;
+}
+</script>
+</body>
+</html>
