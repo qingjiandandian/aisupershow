@@ -52,13 +52,13 @@
   <!-- 视频播放器 -->
   <video controls autoplay>
     <source src="video.mp4" type="video/mp4">
-  
+    您的浏览器不支持 HTML5 视频。
   </video>
 
   <!-- 背景音乐播放器 -->
   <audio controls loop>
-    <source src="bgm.mp3" type="mp3">
-  
+    <source src="bgm.mp3" type="audio/mpeg"> <!-- 修正为正确的MIME类型 -->
+    您的浏览器不支持 HTML5 音频。
   </audio>
 
   <!-- 解说文字 -->
@@ -85,7 +85,7 @@
 
   <!-- 解说语音 -->
   <audio controls>
-    <source src="chengyu.mp3" type="audio">
+    <source src="chengyu.mp3" type="audio/mpeg"> <!-- 修正为正确的MIME类型 -->
     您的浏览器不支持 HTML5 音频。
   </audio>
 </div>
