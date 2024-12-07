@@ -9,7 +9,7 @@
     text-align: center;
     background-color: #f0f0f0;
     /* 设置背景图片 */
-    background-image: url('background.jpg'); 
+    background-image: url('R.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -57,7 +57,7 @@
 
   <!-- 背景音乐播放器 -->
   <audio controls loop>
-    <source src="background-music.mp3" type="audio/mpeg">
+    <source src="bgm.mp3" type="mp3">
   
   </audio>
 
@@ -85,7 +85,7 @@
 
   <!-- 解说语音 -->
   <audio controls>
-    <source src="narration-audio.mp3" type="audio/mpeg">
+    <source src="chengyu.mp3" type="audio">
     您的浏览器不支持 HTML5 音频。
   </audio>
 </div>
