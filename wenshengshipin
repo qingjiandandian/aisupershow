@@ -51,7 +51,7 @@
 
   <!-- 视频播放器 -->
   <video controls autoplay>
-    <source src="wendijiwu.mp4" type="video/mp4">
+    <source src="video.mp4" type="video/mp4">
   
   </video>
 
