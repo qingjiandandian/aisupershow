@@ -17,21 +17,33 @@
     height: 100%;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
     transition: transform 0.5s ease-out;
   }
   #slide1 { background-color: red; }
   #slide2 { background-color: green; transform: translateY(100%); }
   #slide3 { background-color: blue; transform: translateY(200%); }
+
+  .slide span {
+    visibility: hidden; /* 默认隐藏文本 */
+  }
 </style>
 </head>
 <body>
-<div id="slide1" class="slide"></div>
-<div id="slide2" class="slide"></div>
-<div id="slide3" class="slide"></div>
+<div id="slide1" class="slide"><span>红色背景</span></div>
+<div id="slide2" class="slide"><span>绿色背景</span></div>
+<div id="slide3" class="slide"><span>蓝色背景</span></div>
 
 <script>
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
+let startY, movingY;
+
 function swipeUp() {
   if (currentIndex < slides.length - 1) {
     currentIndex++;
@@ -41,17 +53,42 @@ function swipeUp() {
   }
 }
 
+// 显示当前页的文字
+function showTextOnSlide(slide) {
+  const textElement = slide.querySelector('span');
+  if (textElement) {
+    textElement.style.visibility = 'visible';
+  }
+}
+
 // Touch event listeners for mobile devices
-let startY;
 document.addEventListener('touchstart', (e) => {
+  // 记录手指按下的初始位置
   startY = e.touches[0].clientY;
 });
 
+document.addEventListener('touchmove', (e) => {
+  // 更新手指移动的位置
+  movingY = e.touches[0].clientY;
+});
+
 document.addEventListener('touchend', (e) => {
-  const endY = e.changedTouches[0].clientY;
-  if (startY - endY > 50) { // 如果滑动距离超过50像素，则认为是向上滑动
+  const endY = movingY || startY; // 使用movingY，如果未定义则用startY（即没有移动）
+  
+  // 比较初始值和最终值，判断是否翻页
+  if (startY > endY) {
     swipeUp();
   }
+  
+  // 在每次触控结束时检查是否需要显示文字
+  showTextOnSlide(slides[currentIndex]);
+});
+
+// 监听点击事件以显示文本
+slides.forEach(slide => {
+  slide.addEventListener('click', () => {
+    showTextOnSlide(slide);
+  });
 });
 </script>
 </body>
